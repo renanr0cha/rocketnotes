@@ -1,5 +1,6 @@
 require("express-async-errors")
 
+const migrationsRun = require("./database/sqlite/migrations")
 const AppError = require('./utils/AppError');
 
 //importando express
@@ -8,6 +9,8 @@ const express = require('express')
 
 
 const routes = require("./routes")
+
+migrationsRun()
 //usando express na variavel
 const app = express()
 
