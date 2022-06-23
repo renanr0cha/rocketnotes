@@ -11,5 +11,6 @@ const notesController = new NotesController()
 
 // usando http method POST (no insomnia)
 notesRoutes.post("/:user_id", notesController.create)
+notesRoutes.get("/:id", notesController.show)
 
 module.exports = notesRoutes
